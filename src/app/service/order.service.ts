@@ -7,8 +7,8 @@ import { Order } from '../interfaces/order.interface';
   providedIn: 'root',
 })
 export class OrderService {
-  constructor(private http: HttpClient) { }
-  apiurl = 'https://burger-queen-server-mock-21hr.onrender.com/orders';
+  constructor(private http: HttpClient) {}
+  apiurl = 'https://burger-queen-mock-server.onrender.com/orders';
   // apiurl = 'http://localhost:8080/orders';
   httpOptions = {
     headers: new HttpHeaders({

@@ -8,10 +8,10 @@ import { Products } from '../interfaces/products.interface';
 })
 export class ProductsService {
   // Llamando a las dependencias que vamos a usar
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
   // Declarando e inicializando la variable apiurl
   private apiurl: string =
-    'https://burger-queen-server-mock-21hr.onrender.com/products';
+    'https://burger-queen-mock-server.onrender.com/products';
   // private apiurl: string = 'http://localhost:8080/products';
 
   httpOptions = {
