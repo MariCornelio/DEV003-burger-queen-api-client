@@ -47,6 +47,7 @@ export class LoginComponent {
         sessionStorage.setItem('idUser', res.user.id);
         sessionStorage.setItem('role', res.user.role);
         const role = sessionStorage.getItem('role');
+        this.loader = false;
         if (role === 'admin') {
           this.router.navigate(['admin']);
         } else if (role === 'waiter') {
@@ -60,6 +61,7 @@ export class LoginComponent {
         // this.router.navigate(['menu']);
       },
       error: (error) => {
+        this.loader = false;
         if (error.status === 400) {
           this.toastr.error(error.error, 'Invalid credentials');
         } else {
