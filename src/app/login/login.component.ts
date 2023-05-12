@@ -18,6 +18,7 @@ export class LoginComponent {
     '../../assets/burgers-login.jpg',
     '../../assets/burgers-login2.jpg',
   ];
+  loader: boolean = false;
   constructor(
     // pasando dependencias que usaremos en el componente
     private builder: FormBuilder,
@@ -34,6 +35,7 @@ export class LoginComponent {
   }
 
   onSubmit(): void {
+    this.loader = true;
     // objeto formData con propiedades email y password
     const formData = this.loginForm.value;
 
