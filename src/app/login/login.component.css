@@ -36,6 +36,25 @@ article {
   background-color: var(--accent-color);
   color: var(--main-light-color);
 }
+/* ************************************** */
+/* loader */
+.login-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: var(--main-dark-color);
+  opacity: 0.8;
+  z-index: 99;
+}
+
+.login-loader img {
+  width: 100px;
+}
 
 @media (min-width: 1194px) {
   .container {
@@ -78,7 +97,6 @@ article {
   }
 
   @keyframes fadeOut {
-
     0%,
     35% {
       opacity: 1;
